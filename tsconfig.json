@@ -1,0 +1,17 @@
+// tsconfig.json
+{
+    "compilerOptions": {
+      "target": "ES2022",
+      "module": "NodeNext", // Changed for modern Node.js ESM
+      "moduleResolution": "NodeNext", // Changed for modern Node.js ESM
+      "outDir": "./build",
+      "rootDir": "./src",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "resolveJsonModule": true // Allow importing JSON
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
+  }

@@ -1,0 +1,31 @@
+{
+  "name": "mcp-chatbot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start:server": "node build/chatbot-server.js",
+    "start:client": "node build/chatbot-client.js",
+    "dev:server": "nodemon --watch src --ext ts --exec ts-node src/chatbot-server.ts",
+    "dev:client": "nodemon --watch src --ext ts --exec ts-node src/chatbot-client.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "dotenv": "^16.4.7",
+    "openai": "^4.91.1",
+    "uuid": "^11.1.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.17",
+    "@types/uuid": "^10.0.0",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
