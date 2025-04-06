@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realtime AI Chat</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; background-color: #f4f4f4; }
+        #controls button { margin: 5px; padding: 10px 15px; font-size: 1em; cursor: pointer; }
+        #controls button:disabled { cursor: not-allowed; opacity: 0.6; }
+        #status { margin-top: 15px; font-style: italic; color: #555; }
+        #transcript {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            height: 400px;
+            overflow-y: scroll;
+            white-space: pre-wrap; /* Preserve line breaks */
+        }
+        .user-message { color: blue; font-weight: bold; }
+        .assistant-message { color: green; }
+        .error-message { color: red; font-weight: bold;}
+        .status-message { color: gray; font-style: italic; }
+    </style>
+</head>
+<body>
+    <h1>Realtime AI Chat (MCP Backend)</h1>
+
+    <div id="controls">
+        <button id="connectButton">Connect & Start Session</button>
+        <button id="recordButton" disabled>Start Recording</button>
+        <button id="stopButton" disabled>Stop Recording</button>
+    </div>
+
+    <div id="status">Status: Disconnected</div>
+    <div id="transcript"></div>
+
+    <!-- Audio player with controls for debugging and autoplay attributes -->
+    <audio id="audioPlayer" autoplay playsinline></audio>
+
+    <script src="client.js"></script>
+</body>
+</html>
