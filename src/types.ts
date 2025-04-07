@@ -29,7 +29,8 @@ export interface WebSocketMessage {
     | "error"
     | "status_update"
     | "assistant_response"
-    | "user_transcript";
+    | "user_transcript"
+    | "store_assistant_transcript";
   sessionId?: string;
   content?: string;
   message?: string; // For errors or status
